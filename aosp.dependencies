@@ -12,6 +12,12 @@
     "remote"      : "pixel-devices-blobs"
   },
   {
+    "repository"  : "kernel_oneplus_guacamoleb-headers",
+    "target_path" : "kernel/oneplus/sm8150-headers",
+    "branch"      : "eleven",
+    "remote"      : "pixel-devices"
+  },
+  {
     "repository"  : "android_device_oneplus_common",
     "target_path" : "device/oneplus/common",
     "branch"      : "lineage-18.1",
