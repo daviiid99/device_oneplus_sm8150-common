@@ -6,6 +6,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
 
+# OnePlus Camera
+$(call inherit-product-if-exists, vendor/oneplus/apps/sm8150-common/config.mk)
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -156,8 +159,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     libxml2 \
     Snap \
-    vendor.oneplus.camera.CameraHIDL@1.0.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    vendor.oneplus.hardware.camera@1.0.vendor:64 \
+    vendor.oneplus.hardware.CameraMDMHIDL@1.0.vendor:64 \
+    vendor.qti.hardware.camera.device@1.0.vendor:64
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -169,6 +173,7 @@ PRODUCT_PACKAGES += \
     init.oem.debug.rc \
     init.oem.rc \
     init.oem_ftm.rc \
+    init.opcamera.rc \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
