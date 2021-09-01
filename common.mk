@@ -9,12 +9,6 @@ $(call inherit-product, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
 # OnePlus Camera
 $(call inherit-product-if-exists, vendor/oneplus/apps/sm8150-common/config.mk)
 
-# OnePlus
-PRODUCT_PACKAGES += \
-    oneplus-fwk.oneplus_msmnile
-
-PRODUCT_BOOT_JARS += \
-    oneplus-fwk.oneplus_msmnile
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -389,13 +383,6 @@ PRODUCT_COPY_FILES += \
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
     libstdc++.vendor
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oneplus_msmnile
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
