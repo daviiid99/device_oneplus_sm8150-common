@@ -9,6 +9,13 @@ $(call inherit-product, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
 # OnePlus Camera
 $(call inherit-product-if-exists, vendor/oneplus/apps/sm8150-common/config.mk)
 
+# OnePlus
+PRODUCT_PACKAGES += \
+    oneplus-fwk.oneplus_msmnile
+
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk.oneplus_msmnile
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
