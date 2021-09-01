@@ -352,13 +352,6 @@ PRODUCT_PACKAGES += \
     libOmxVidcCommon \
     libstagefrighthw
 
-# OnePlus
-PRODUCT_PACKAGES += \
-    oneplus-fwk.oneplus_msmnile
-
-PRODUCT_BOOT_JARS += \
-    oneplus-fwk.oneplus_msmnile
-
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
